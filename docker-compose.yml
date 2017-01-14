@@ -1,3 +1,6 @@
 fedremote:
     container_name: fedremote
     image: learninglayers/fedremote
+    expose: 
+        - "9011/tcp"
+        - "9011/udp"
