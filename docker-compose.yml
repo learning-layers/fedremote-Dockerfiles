@@ -1,0 +1,3 @@
+fedremote:
+    container_name: fedremote
+    image: learninglayers/fedremote
