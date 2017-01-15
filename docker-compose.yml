@@ -1,6 +1,8 @@
 fedremote:
     container_name: fedremote
     image: learninglayers/fedremote
-    ports: 
-        - "9011/tcp:9011/tcp"
-        - "9011/udp:9011/udp"
+    expose: 
+        - "9011/tcp"
+        - "9011/udp"
+    links:
+        - fed
