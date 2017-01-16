@@ -1,8 +1,17 @@
+fed:
+    container_name: fed
+    image: learninglayers/fed
+    ports:
+        - "8080:8080" 
+        - "9011/tcp:9011/tcp"
+        - "9011/udp:9011/udp"
+    env_file:
+        - fed.env
+    net: "host"
+
 fedremote:
     container_name: fedremote
     image: learninglayers/fedremote
     expose: 
-        - "9011/tcp"
-        - "9011/udp"
-    links:
-        - fed
+        - "9012/tcp"
+        - "9012/udp"
